@@ -1,0 +1,286 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #064d51;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 500px; 
+  margin: 50px auto;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+/* Hide elements initially */
+.hidden {
+  display: none;
+}
+#name {
+  width: 400px;
+  height: 20px;
+}
+#preferences {
+  width: 400px;
+  height: 20px;
+}
+#interests {
+  width: 400px;
+  height: 20px;
+}
+#availability {
+  width: 400px;
+  height: 20px;
+
+}
+.progress-bar {
+  margin: 20px auto; /* Center progress bar horizontally */
+  width: 900px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress {
+  background-color: #48cbc5;
+  height: 100%;
+  border-radius: 10px;
+  width: 0;
+  transition: width 0.5s ease;
+}
+.progress-text-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.progress-text {
+  font-size: 16px;
+  color: white;
+}
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+button {
+  padding: 10px 20px;
+  background-color: #48cbc5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #1e9c99;
+}
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .header {
+      padding: 10px 15px;
+  }
+  .navLogo h2 {
+      font-size: 24px;
+  }
+  .navigationBar ul li {
+      margin-left: 25px;
+  }
+  .iconsNav img {
+      margin-right: 40px;
+  }
+  .team-heading {
+      font-size: 40px;
+  }
+  .team-area {
+      flex-direction: column;
+      align-items: center;
+  }
+  .single-team {
+      width: 80%;
+      margin-bottom: 30px;
+  }
+  .footer {
+      padding-top: 30px;
+  }
+  .ft-container {
+      width: 90%;
+  }
+  .footer-content {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .footer-content.left {
+      text-align: center;
+      margin-right: 0;
+  }
+  .footer-content.right {
+      text-align: center;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .navLogo h2 {
+      font-size: 20px;
+  }
+  .navigationBar ul li {
+      margin-left: 15px;
+  }
+  .iconsNav img {
+      margin-right: 20px;
+  }
+  .team-heading {
+      font-size: 30px;
+  }
+}
+
+/*Navigation bar*/
+.header{
+  top:0;
+  position: fixed;
+  display: flex ;
+  flex-wrap: wrap; 
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 20px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 8%;
+}
+
+.navLogo{
+  display: flex;
+  align-items: center;
+  color: #5ec0be;
+}
+
+.navLogo h2 {
+  margin: 0;
+  font-size: 29px;
+}
+
+.navigationBar {
+  float: right;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+.navigationBar ul{
+  float: left;
+  justify-content: center;
+  align-items: center;
+}
+.navigationBar ul li{
+  list-style: none;
+  display: inline;
+  font-size: 18px;
+  margin-left: 52px;
+  margin-top: 27px;
+  margin-right: 5px;
+}
+.navigationBar ul li a{
+  text-decoration: none;
+  color: #dae0d1;
+  position: relative;
+}
+.navigationBar ul li a:hover{
+  color: #5ec0be;
+}
+.navigationBar ul li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #5ec0be;
+}
+.iconsNav a {
+  margin-left: -5px;
+}
+.iconsNav img{
+  margin-right: 70px;
+}
+
+/*Footer*/
+.footer{
+  background: #020409;
+  padding-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+  
+  font-size: 16px;
+  border-radius: 50px;
+}
+.ft-container{
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer-content{
+  width: 32%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer-content.left {
+  text-align: left;
+  margin-right: 2%;
+}
+
+.footer-content.right {
+  text-align: right;
+}
+.footer-content h3, .footer-content.left h3, .footer-content.right h3{
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.footer-content p{
+  padding: 7px;
+}
+.footer-content ul{
+  text-align: center;
+}
+.ft-list{
+  padding: 0;
+  
+}
+.ft-list li{
+  width: auto;
+  text-align: center;
+  list-style-type:none;
+  padding: 5px;
+
+}
+.ft-list a{
+  color: white;
+}
+.footer-content a:hover{
+  color: #5ec0be;
+}
+
+.bottom-bar{
+  background: #458887;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+.bottom-bar p{
+  color: #343434;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}

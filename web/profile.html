@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="CSS/profile.css">
+</head>
+<body class="backImage" background="Images/background.jpg">
+    <!--Navigation bar-->
+    <div class="header">
+        <div class="navLogo">
+            <img src="Images/noBGImage.png" alt="logo" style="width: 130px;">
+            <h2>HEALTH HORIZON</h2>
+        </div>
+        <div class="navigationBar">    
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="team.html">ABOUT &nbsp;US</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">FEEDBACK</a></li>
+                <!-- <li><a href="#">TEAM</a></li> -->
+            </ul>
+        </div>
+        <div class="iconsNav">
+            <a href="profile.html" c lass="active"><img src="Images/profile_icon-removebg-preview.png" alt="profile" style="width: 23px; border-radius: 100px; padding-bottom: 12px;"></a>
+        </div>
+    </div>
+<div class="container">
+    <div id="step1">
+        <h2>Step 1: Personal Details</h2>
+        <!-- Input fields for first name, last name, and age -->
+        <input type="text" id="fname" placeholder="Type your first name">
+        <input type="text" id="lname" placeholder="Type your second name">
+        <input type="number" id="age" placeholder="Type age here">
+        <br>
+        <br>
+        <!-- Button to proceed to the next step -->
+        <button onclick="nextStep()">Next</button>
+    </div>
+    <div id="step2" class="hidden">
+        <h2>Step 2: Are you certified or trained in any health or wellness-related field?</h2>
+        <input type="text" id="fields" placeholder="If so, please specify.">
+        <br>
+        <br>
+        <button onclick="nextStep()">Next</button>
+        <button onclick="skipStep()">Skip</button>
+    </div>
+    <div id="step3" class="hidden">
+        <h2>Step 3: How often do you do a health check-up?</h2>
+        <input type="text" id="checkups" placeholder="Daily/ Weekly/ Occasionally/ Rarely/ Never">
+        <br>
+        <br>
+        <button onclick="nextStep()">Next</button>
+        <button onclick="skipStep()">Skip</button>
+    </div>
+    <div id="step4" class="hidden">
+        <h2>Step 4:Does your family have any history of hereditary disease?</h2>
+        <input type="text" id="history" placeholder="What are they?">
+        <br>
+        <br>
+        <button onclick="nextStep()">Next</button>
+        <button onclick="skipStep()">Skip</button>
+    </div>
+    <div id="step5" class="hidden">
+        <h2>Step 5: Have your physical or emotional health interfered with your daily activities?</h2>
+        <input type="text" id="activities" placeholder="If you comfortable enough, feel free to explain">
+        <br>
+        <br>
+        <button onclick="nextStep()">Next</button>
+        <button onclick="skipStep()">Skip</button>
+    </div>
+    <div id="step6" class="hidden">
+        <h2>Step 6: How often do you engage in physical activity?</h2>
+        <input type="text" id="physical" placeholder="Daily/ Weekly/ Occasionally/ Rarely/ Never">
+        <br>
+        <br>
+        <button onclick="nextStep()">Next</button>
+        <button onclick="skipStep()">Skip</button>
+    </div>
+    <div id="step7" class="hidden">
+        <h2>Step 7: What are your main health and wellness goals?</h2>
+        <input type="text" id="goals" placeholder="Open-ended response">
+        <br>
+        <br>
+        <button onclick="nextStep()">Next</button>
+        <button onclick="skipStep()">Skip</button>
+    </div>
+    <div id="step8" class="hidden">
+        <h2>Step 8: How healthy would you consider yourself on a scale of 1-10?</h2>
+        <input type="text" id="scale" placeholder="Based on your opinion">
+        <br>
+        <br>
+        <button onclick="nextStep()">Next</button>
+        <button onclick="skipStep()">Skip</button>
+    </div>
+    <div id="profile" class="hidden">
+        <h2><u>Entered Details</u></h2>
+        <p><b>First name: </b><span id="profile-name"></span></p>
+        <p><b>Last name: </b><span id="profile-last-name"></span></p>
+        <p><b>Age: </b><span id="profile-age"></span></p>
+        <p><b>Are you certified or trained in any health or wellness-related field? </b><span id="profile-fields"></span></p>
+        <p><b>How often do you do a health check-up? </b><span id="profile-checkups"></span></p>
+        <p><b>Does your family have any history of hereditary disease? </b><span id="profile-history"></span></p>
+        <p><b>Have your physical or emotional health interfered with your daily activities? </b><span id="profile-activities"></span></p>
+        <p><b>How often do you engage in physical activity? </b><span id="profile-physical"></span></p>
+    
+        <p><b>How healthy would you consider yourself on a scale of 1-10? </b><span id="profile-scale"></span></p>
+    </div>
+    <br>
+</div>
+<!-- Progress Bar -->
+<div class="progress-bar">
+    <div class="progress" id="progress"></div>
+</div>
+<!-- Progress Text Container -->
+<div class="progress-text-container">
+    <div class="progress-text" id="progress-text"></div>
+</div>
+<!-- Link to external JavaScript file -->
+<script src="JS/profile.js"></script>
+<footer>
+ <!--Footer-->
+ <div class="footer">
+    <div class="ft-container">
+        <div class="footer-content left">
+            <h3>
+                <img src="Images/blue-removebg-preview.png" alt="Logo" style="height: 30px; width: auto; vertical-align: middle;">
+                Health Horizons
+            </h3>
+            <p>
+                At Health Horizons, we're passionate about ensuring that everyone has the opportunity to thrive with good health and well-being. We educate, advocate, and take action for your well-being. Together, let's build a better future.
+            </p>
+        </div>
+        <div class="footer-content">
+            <h3>Quick Links</h3>
+             <ul class="ft-list">
+                <li><a href="#">@Sanduni Pieris</a></li>
+                <li><a href="#">@Malmi Perera</a></li>
+                <li><a href="pageEditor.html">@Disini Hettige</a></li>
+                <li><a href="#">@Sathmi Kodithuwakku</a></li>
+                
+             </ul>
+        </div>
+        <div class="footer-content right">
+            <h3>Contact Us</h3>
+            <p>Email: horizons@gmail.com</p>
+            <p>Phone: +121 5655 556     </p>
+            <p>Address: 12, 32nd lane,Colombo 4</p>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>&copy; 2024 Health Horizons. All rights reserved</p>
+    </div>
+</div>
+</footer>
+</body>
+</html>
